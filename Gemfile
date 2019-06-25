@@ -5,11 +5,11 @@ ruby '2.6.3'
 
 # Bundle edge Rails ins# tead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
-<<<<<<< HEAD
+#<<<<<<< HEAD
 # Use bootstrap-sass for project
-=======
+#=======
 # Bootstrap scss for web
->>>>>>> filling-layout
+#>>>>>>> filling-layout
 gem 'bootstrap-sass', '3.3.7'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
