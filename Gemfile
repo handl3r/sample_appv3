@@ -12,7 +12,7 @@ gem 'rails', '~> 5.2.3'
 #>>>>>>> filling-layout
 # Use bcrypt for hash password
 gem 'bcrypt',         '3.1.12'
-# Use bootstrap-sass for layout design 
+# Use bootstrap-sass for layout design
 gem 'bootstrap-sass', '3.3.7'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -38,6 +38,8 @@ gem 'minitest-reporters', group: :test
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+# JQuery for dropdown menu
+gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
