@@ -10,8 +10,15 @@ gem 'rails', '~> 5.2.3'
 #=======
 # Bootstrap scss for web
 #>>>>>>> filling-layout
+# Paginate for show all users
+gem 'will_paginate'
+# Boostrap for pagnate
+gem 'bootstrap-will_paginate'
+
 # Use bcrypt for hash password
 gem 'bcrypt',         '3.1.12'
+# User faker to mock data
+gem 'faker'
 # Use bootstrap-sass for layout design
 gem 'bootstrap-sass', '3.3.7'
 # Use sqlite3 as the database for Active Record
