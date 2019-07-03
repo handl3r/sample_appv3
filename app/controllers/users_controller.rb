@@ -5,19 +5,24 @@ class UsersController < ApplicationController
     @user = User.new
   end
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
   def show
     @user = User.find(params[:id])
+    unless @user.activated?
+      flash[:danger] = "This account is not activated"
+      redirect_to root_url
+    end
+    #redirect_to root_url and return unless @user.activated?
     # debugger
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = 'Welcome new user'
-      redirect_to user_url(@user)
+      @user.send_activation_email
+      flash[:infor] = 'Please check your email to activate your account.'
+      redirect_to root_url
     else
       render 'new'
     end

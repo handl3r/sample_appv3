@@ -12,7 +12,9 @@
    email: "email@gmail.com",
    password: 'password_default',
    password_confirmation: 'password_default',
-   admin: true
+   admin: true,
+   activated: true,
+   activated_at: Time.zone.now
  )
  99.times do |time|
    name = Faker::Name.name
@@ -22,6 +24,8 @@
      name: name,
      email: email,
      password: password,
-     password_confirmation: password
+     password_confirmation: password,
+     activated: true,
+     activated_at: Time.zone.now
    )
  end
