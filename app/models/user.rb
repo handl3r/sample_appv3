@@ -15,6 +15,10 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   has_secure_password
 
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+
   def downcase_email
     self.email = email.downcase
   end
@@ -75,7 +79,4 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
-  def feed
-    Micropost.where("user_id = ?", id)
-  end
 end
