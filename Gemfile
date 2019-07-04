@@ -14,7 +14,9 @@ gem 'rails', '~> 5.2.3'
 gem 'will_paginate'
 # Boostrap for pagnate
 gem 'bootstrap-will_paginate'
-
+# gem for upload image
+gem 'carrierwave'
+gem 'mini_magick'
 # Use bcrypt for hash password
 gem 'bcrypt',         '3.1.12'
 # User faker to mock data
@@ -28,6 +30,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'fog'
 end
 # Test
 gem 'rails-controller-testing'

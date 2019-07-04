@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
     unless @user.activated?
       flash[:danger] = "This account is not activated"
       redirect_to root_url
@@ -51,14 +52,6 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i[update edit]
   before_action :admin_user, only: :destroy
   private
-
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = 'Please login before!'
-      redirect_to login_path
-    end
-  end
 
   def correct_user
      @user = User.find(params[:id])
