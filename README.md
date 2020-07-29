@@ -1,24 +1,12 @@
-# README
+# Rails tutorial
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is practicse project of rails5 tutorial
 
-Things you may want to cover:
+Tech:
 
-* Ruby version
+* Ruby 2.6.3
 
-* System dependencies
+* Rails 5.2.3
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* just to check new commit 
+* Database sqlite3
+* Other technologies
